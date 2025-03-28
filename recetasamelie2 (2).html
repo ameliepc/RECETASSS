@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recetas de Postres</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #F5F5DC;
+            color: #2B2A29;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .recipe-list {
+            margin: 20px;
+        }
+
+        .recipe {
+            background-color: #F5F5DC;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .recipe h2 {
+            margin: 0;
+            color: #ff6347;
+        }
+
+        .recipe-details {
+            display: none;
+            margin-top: 10px;
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .ingredients ul,
+        .preparation ol {
+            margin-left: 20px;
+        }
+
+        footer {
+            background-color: #ff6347;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .recipe:hover {
+            background-color: #ffe4e1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Recetas de Postres</h1>
+    </header>
+
+    <div class="recipe-list">
+        <!-- Receta 1 -->
+        <div class="recipe" onclick="toggleDetails(1)">
+            <h2>Brownies de Chocolate</h2>
+            <div id="recipe1" class="recipe-details">
+                <div class="ingredients">
+                    <h3>Ingredientes:</h3>
+                    <ul>
+                        <li>200g de chocolate negro</li>
+                        <li>100g de mantequilla</li>
+                        <li>150g de azúcar</li>
+                        <li>2 huevos</li>
+                        <li>80g de harina</li>
+                        <li>1 cucharadita de esencia de vainilla</li>
+                        <li>Pizca de sal</li>
+                    </ul>
+                </div>
+                <div class="preparation">
+                    <h3>Preparación:</h3>
+                    <ol>
+                        <li>Precalienta el horno a 180°C y engrasa un molde para hornear.</li>
+                        <li>Derrite el chocolate y la mantequilla juntos en un recipiente a baño maría.</li>
+                        <li>Añade el azúcar y mezcla bien. Luego incorpora los huevos, la harina, la vainilla y la sal.</li>
+                        <li>Vierte la mezcla en el molde y hornea durante 25-30 minutos. Deja enfriar antes de cortar.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- Receta 2 -->
+        <div class="recipe" onclick="toggleDetails(2)">
+            <h2>Tarta de Limón</h2>
+            <div id="recipe2" class="recipe-details">
+                <div class="ingredients">
+                    <h3>Ingredientes:</h3>
+                    <ul>
+                        <li>1 base de masa para tarta</li>
+                        <li>1 taza de azúcar</li>
+                        <li>3 huevos</li>
+                        <li>1 taza de jugo de limón</li>
+                        <li>1 cucharada de ralladura de limón</li>
+                        <li>1 taza de crema de leche</li>
+                    </ul>
+                </div>
+                <div class="preparation">
+                    <h3>Preparación:</h3>
+                    <ol>
+                        <li>Precalienta el horno a 180°C.</li>
+                        <li>Hornea la base de la masa durante 15 minutos hasta que esté dorada.</li>
+                        <li>En un tazón, bate los huevos con el azúcar, el jugo de limón y la ralladura.</li>
+                        <li>Agrega la crema de leche y mezcla bien. Vierte la mezcla sobre la base horneada.</li>
+                        <li>Hornea durante 25 minutos hasta que la tarta se haya cuajado. Deja enfriar antes de servir.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- Receta 3 -->
+        <div class="recipe" onclick="toggleDetails(3)">
+            <h2>Helado de Vainilla Casero</h2>
+            <div id="recipe3" class="recipe-details">
+                <div class="ingredients">
+                    <h3>Ingredientes:</h3>
+                    <ul>
+                        <li>500 ml de crema para batir</li>
+                        <li>1 taza de leche condensada</li>
+                        <li>2 cucharaditas de esencia de vainilla</li>
+                        <li>1/4 taza de azúcar</li>
+                    </ul>
+                </div>
+                <div class="preparation">
+                    <h3>Preparación:</h3>
+                    <ol>
+                        <li>Bate la crema para batir hasta que forme picos suaves.</li>
+                        <li>En otro recipiente, mezcla la leche condensada, el azúcar y la vainilla.</li>
+                        <li>Incorpora lentamente la crema batida a la mezcla de leche condensada.</li>
+                        <li>Vierte la mezcla en un molde y congela durante al menos 4 horas o hasta que esté firme.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; hecho por Amelie pederos</p>
+    </footer>
+
+    <script>
+        function toggleDetails(recipeNumber) {
+            var recipeDetails = document.getElementById("recipe" + recipeNumber);
+            if (recipeDetails.style.display === "block") {
+                recipeDetails.style.display = "none";
+            } else {
+                recipeDetails.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
